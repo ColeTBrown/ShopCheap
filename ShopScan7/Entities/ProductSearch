@@ -1,0 +1,54 @@
+{
+  "name": "ProductSearch",
+  "type": "object",
+  "properties": {
+    "image_url": {
+      "type": "string",
+      "description": "URL of the uploaded product image"
+    },
+    "product_name": {
+      "type": "string",
+      "description": "AI-identified product name"
+    },
+    "product_description": {
+      "type": "string",
+      "description": "Brief description of the identified product"
+    },
+    "results": {
+      "type": "array",
+      "description": "List of found deals",
+      "items": {
+        "type": "object",
+        "properties": {
+          "store": {
+            "type": "string"
+          },
+          "product_title": {
+            "type": "string"
+          },
+          "price": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "searching",
+        "completed",
+        "failed"
+      ],
+      "default": "searching"
+    }
+  },
+  "required": [
+    "image_url"
+  ]
+}

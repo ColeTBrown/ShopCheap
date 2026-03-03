@@ -1,0 +1,55 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    --background: 340 30% 97%;
+    --foreground: 340 20% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 20% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 20% 20%;
+    --primary: 336 80% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 330 30% 94%;
+    --secondary-foreground: 340 20% 30%;
+    --muted: 330 20% 93%;
+    --muted-foreground: 340 10% 55%;
+    --accent: 330 30% 94%;
+    --accent-foreground: 340 20% 30%;
+    --destructive: 0 62.8% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 330 20% 88%;
+    --input: 330 20% 88%;
+    --ring: 336 80% 65%;
+    --radius: 1rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.5);
+}
